@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Randomizer</title>
+
+    <style>
+      body {
+        background-color: rgb(32, 32, 32);
+        color: rgb(43, 255, 255);
+        font-size: 50px;
+        text-align: center;
+      }
+
+      img {
+        width: 700px;
+        height: 400px;
+        margin: 0 auto 0 auto;
+        display: block;
+      }
+    </style>
+
+    <script>
+      var car_names = new Array(
+        "Ford Mustang",
+        "Subaru BRZ",
+        "Chevrolet Camaro"
+      );
+      var car_pics = new Array(
+        "https://image.cnbcfm.com/api/v1/image/107118551-2024-Mustang-18.jpg?v=166320090",
+        "https://i.ytimg.com/vi/hged89zWHd4/maxresdefault.jpg",
+        "https://www.carscoops.com/wp-content/uploads/2021/09/Chevrolet-Camaro-Z28-1024x555.jpg"
+      );
+
+      username = prompt("What is your name?");
+
+      random = Math.floor(Math.random() * car_names.length);
+
+      if (username === "Daniel") {
+        document.write("<h2>Welcome owner, " + username + "</h2>");
+        document.write("<h3>You get a " + car_names[random]);
+        document.write("<img src='" + car_pics[random] + "'>");
+      } 
+      else if (username === "Bob") {
+        document.write("<h2>Hello Random " + username + "</h2>");
+        document.write("<h3>You get a " + car_names[random]);
+        document.write("<img src='" + car_pics[random] + "'>");
+      }
+      else {
+        document.write("<h2>Hello " + username + "</h2>");
+        document.write("<h3>You get a " + car_names[random]);
+        document.write("<img src='" + car_pics[random] + "'>");
+      }
+      </script>
+  </head>
+  <body>
+    <h1>I love JavaScript</h1>
+  </body>
+</html>
